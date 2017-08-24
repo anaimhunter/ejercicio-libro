@@ -10,6 +10,16 @@ public class Libro
         titulo=tituloI;
         autor=autorI;
     }
-  
-  
+    
+    public String dimeAutor()
+    {
+        return autor;
+    }
+    
+    public String dimeTitulo()
+    {
+        return titulo;
+    }
+    
+    
 }
