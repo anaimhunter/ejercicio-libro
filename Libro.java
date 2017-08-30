@@ -1,5 +1,8 @@
 
-
+/**
+ * La clase Libro representa un objeto libro
+ * @author Ana M.Hunter
+ */
 public class Libro
 {
     private String titulo;
@@ -8,6 +11,12 @@ public class Libro
     private String numeroDeReferencia;
     private int prestamos;
     
+    /**
+     * Constructor libro
+     * @param tituloI  Parametro que representa el titulo del libro
+     * @param autorI Parametro que representa el autor del libro
+     * @param paginasI Parametro que representa el numero de paginas del libro
+     */
     public Libro(String tituloI, String autorI, int paginasI)
     {
         titulo=tituloI;
@@ -16,22 +25,38 @@ public class Libro
         numeroDeReferencia = "";
         prestamos = 0;
     }
-    
+    /**
+     * Da el nombre del autor
+     * @return Regresa el nombre del autor
+     */
     public String dimeAutor()
     {
         return autor;
     }
     
+    /**
+     * Da el titulo del libro
+     * @return Regresa el titulo del libro
+     */
     public String dimeTitulo()
     {
         return titulo;
     }
     
+    /**
+     * Da el numero de paginas
+     * @return Regresa el numero de paginas
+     */
     public int dimePaginas()
     {
         return paginas;
     }
     
+    /**
+     * Da los datos del libro
+     * @return Regresa una cadena que contiene los datos del libro: titulo,autor,
+     *         numero de paginas,numero de referencia, numero de prestamos, 
+     */
     public String dimeDetalles()
     {
         String cadDet = "";
@@ -61,6 +86,10 @@ public class Libro
         return cadDet;
     }
     
+    /**
+     * Cambia el numero de referencia
+     * @param nuevaRef Parametro que representa el nuevo nuemero de referencia
+     */
     public void cambiaNumRef(String nuevaRef)
     {
         if(numeroDeReferencia.length()>2)
@@ -69,16 +98,27 @@ public class Libro
         }
     }
     
+    /**
+     * Da el numero de referencia
+     * @return Regresa el numero de referencia
+     */
     public String dimeNumRef()
     {
         return numeroDeReferencia;
     }
     
+    /**
+     * Presta un libro
+     */
     public void prestar()
     {
         prestamos ++;
     }
     
+    /**
+     * Indica cuantas veces se ha prestado el libro
+     * @return Regresa el numero de prestamos del libro
+     */
     public int dimePrestamos()
     {
         return prestamos;
